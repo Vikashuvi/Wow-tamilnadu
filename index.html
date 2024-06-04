@@ -14,19 +14,54 @@
   <header class="header">
     <a href="#" class="logo"><img class="h-14 w-14" src="./assests/wow logo.png" alt="Logo"></a>
    
-    <nav class="navbar">
-    </nav>
+    <nav class="navbar"></nav>
     <button class="bg-black text-white py-1.5 px-3 text-sm rounded hover:bg-gray-400">Register</button>
   </header>
   <div class="nav-bg"></div>
 
   <!-- Main Content -->
-  <div class="container mx-auto text-center mt-40">
-    <h1 class="text-4xl mb-4">Welcome to Our Website</h1>
-    <p class="text-lg">This is a sample website with a glassmorphic navigation bar and a grid background.</p>
+  <div class="container mx-auto flex items-center h-full px-10">
+    <div class="w-1/2">
+      <h1 class="text-6xl mb-4">GDSC WOW </h1>
+      <p class="text-lg mb-6">This is a sample website with a glassmorphic navigation bar and a grid background.</p>
+      <button class="bg-black text-white py-1 px-3 text-sm rounded hover:bg-gray-400">Register</button>
+    </div>
+    <div class="w-1/2 flex justify-end">
+      <img src="./assests/wow logo (1).png" alt="Event Image" class="h-150 w-150">
+    </div>
   </div>
+  
+  </div>
+  
+  <section>
 
- 
+    <div class="wrapper">
+      
+        <h1 class="text-center text-4xl my-10" >Event Starts in</h1>
+      <div class="countdown">
+        <div class="box">
+          <span class="num" id="day-box">00</span>
+          <span class="text">Days</span>
+        </div>
+        <div class="box">
+          <span class="num" id="hr-box">00</span>
+          <span class="text">Hours</span>
+        </div>
+        <div class="box">
+          <span class="num" id="min-box">00</span>
+          <span class="text">Minutes</span>
+        </div>
+        <div class="box">
+          <span class="num" id="sec-box">00</span>
+          <span class="text">Seconds</span>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
 
 </body>
+
+<script src="script.js"></script>
 </html>
