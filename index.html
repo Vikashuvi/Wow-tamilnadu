@@ -11,34 +11,32 @@
 <body class="grid-bg h-screen text-white" style="background-color: #151719;">
 
   <!-- Navigation Bar -->
-  <header class="header">
+  <header class="header flex items-center justify-between fixed w-full p-6 backdrop-filter backdrop-blur-lg bg-opacity-10 bg-black border-b border-white z-50">
     <a href="#" class="logo"><img class="h-14 w-14" src="./assests/wow logo.png" alt="Logo"></a>
-   
-    <nav class="navbar"></nav>
+    <nav class="navbar hidden md:flex space-x-4">
+      <!-- Add your nav links here -->
+    </nav>
     <button class="bg-black text-white py-1.5 px-3 text-sm rounded hover:bg-gray-400">Register</button>
   </header>
   <div class="nav-bg"></div>
 
   <!-- Main Content -->
-  <div class="container mx-auto flex items-center h-full px-10">
-    <div class="w-1/2">
-      <h1 class="text-6xl mb-4">GDSC WOW </h1>
+  <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center h-full px-10">
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <h1 class="text-4xl md:text-6xl mb-4">GDSC WOW</h1>
       <p class="text-lg mb-6">This is a sample website with a glassmorphic navigation bar and a grid background.</p>
       <button class="bg-black text-white py-1 px-3 text-sm rounded hover:bg-gray-400">Register</button>
     </div>
-    <div class="w-1/2 flex justify-end">
-      <img src="./assests/wow logo (1).png" alt="Event Image" class="h-150 w-150">
+    <div class="w-full md:w-1/2 flex justify-center md:justify-start">
+      <img src="./assests/wow logo (1).png" alt="Event Image" class="h-120 w-120 md:h-150 md:w-150 mb-4 md:mb-0">
     </div>
-  </div>
-  
-  </div>
-  
-  <section>
+  </div>  
 
+  <!-- Countdown Section -->
+  <section class="countdown-section mb-6">
     <div class="wrapper">
-      
-        <h1 class="text-center text-4xl my-10" >Event Starts in</h1>
-      <div class="countdown">
+      <h1 class="text-center text-4xl my-10">Event Starts in</h1>
+      <div class="countdown grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div class="box">
           <span class="num" id="day-box">00</span>
           <span class="text">Days</span>
@@ -57,11 +55,16 @@
         </div>
       </div>
     </div>
-    
   </section>
 
+  <!-- About Section -->
+  <section class="about-section mt-10">
+    <div class="wrapper mx-auto">
+      <h2 class="text-4xl">About GDSC WOW</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt ipsam soluta magni ab recusandae? Dolorum quod, velit similique vel perferendis nisi facere nostrum sapiente? Dicta ratione magnam libero accusamus.</p>
+    </div>
+  </section>
 
+  <script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
 </html>
