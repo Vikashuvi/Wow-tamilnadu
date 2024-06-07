@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body class="grid-bg h-screen text-white" style="background-color: #151719;">
 
@@ -57,7 +58,7 @@
     </div>
   </section>
 
-  <section class="about-section mt-10">
+  <section class="about-section mt-6">
     <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center h-full px-10">
       <div class="w-full md:w-1/2 text-center md:text-left">
         <h2 class="text-4xl md:text-6xl mb-4">About GDSC WOW</h2>
@@ -70,20 +71,50 @@
     </div>
   </section>
 
-  
-  
-  
-  <section>
-    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-center h-full px-10">
-      <div class="w-full md:w-1/2 text-center md:text-left">
-        <h1 class="text-4xl md:text-6xl mb-4">GDSC WOW</h1>
-        <p class="text-lg mb-6">This is a sample website with a glassmorphic navigation bar and a grid background.</p>
-        <button class="bg-black text-white py-1 px-3 text-sm rounded hover:bg-gray-400">Register</button>
+  <section class="agenda-section mt-6">
+    <div class="container mx-auto">
+      <h2 class="text-4xl md:text-6xl mb-8 text-center text-white">Agenda</h2>
+      <div class="slider-wrapper relative">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          chevron_left
+        </button>
+        <ul class="image-list flex overflow-x-auto">
+          <!-- Add your agenda items here -->
+          <li class="image-item bg-red-400 p-6 flex-none">
+            <p class="text-2xl font-bold">8:30am</p>
+            <p class="mt-2">Registration</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">9:30am</p>
+            <p class="mt-2">Opening Keynote</p>
+          </li>
+          <li class="image-item bg-blue-400 p-6 flex-none">
+            <p class="text-2xl font-bold">10:30am</p>
+            <p class="mt-2">AI Impacts on Technical Careers</p>
+          </li>
+          <li class="image-item bg-yellow-400 p-6 flex-none">
+            <p class="text-2xl font-bold">10:45am</p>
+            <p class="mt-2">Panel Discussion</p>
+          </li>
+          <li class="image-item bg-red-400 p-6 flex-none">
+            <p class="text-2xl font-bold">11:15am</p>
+            <p class="mt-2">Refreshments Break</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">11:30am</p>
+            <p class="mt-2">AI Impacts Non-Technical Careers</p>
+          </li>
+        </ul>
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          chevron_right
+        </button>
       </div>
-      <div class="w-full md:w-1/2 flex justify-center md:justify-start">
-        <img src="./assests/wow logo (1).png" alt="Event Image" class="h-120 w-120 md:h-150 md:w-150 mb-4 md:mb-0">
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
       </div>
-    </div>  
+    </div>
   </section>
   
 
