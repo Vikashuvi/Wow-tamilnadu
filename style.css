@@ -72,7 +72,6 @@
   background-size: 40px 40px;
 }
 
-
 .countdown-section, .about-section {
   padding: 50px 0;
   display: flex;
@@ -82,14 +81,11 @@
   flex-direction: column;
 }
 
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-
 
 .countdown .box {
   background-color: rgba(255, 255, 255, 0.05);
@@ -100,8 +96,7 @@
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  border-radius: 0.1em;
-  
+  border-radius: 10px;
 }
 
 .countdown .box .num {
@@ -111,7 +106,6 @@
 .countdown .box .text {
   font-size: 1em;
   background-color: var(--color-white);
-
   padding: 0.7em;
   font-weight: 600;
   border-radius: 0.3em;
@@ -153,6 +147,27 @@ span.text {
   font-weight: 600;
   border-radius: 0.3em;
   box-shadow: var(--color-shadow);
+}
+
+
+.about-section {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* BREAKPOINTS */
