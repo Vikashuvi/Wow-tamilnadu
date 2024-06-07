@@ -334,7 +334,7 @@ span.text {
 .slider-scrollbar .scrollbar-thumb {
   height: 100%;
   width: 30%;
-  background-color: #ff9900;
+  background-color: #f9ab00;
   border-radius: inherit;
   position: absolute;
   top: 0;
@@ -375,4 +375,42 @@ span.text {
   .slider-scrollbar .scrollbar-thumb {
     width: 40%;
   }
+}
+
+.faq-question, .faq-answer {
+  background-color: #1e1e1e;
+}
+
+.faq-section {
+  margin-top: 150px;
+}
+
+.faq-section .faq-item {
+  border-bottom: 1px solid #444;
+}
+
+.faq-section .faq-question {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-section .faq-question:hover {
+  background-color: #34a853;
+}
+
+.faq-section .faq-answer {
+  display: none;
+  overflow: hidden;
+}
+
+.faq-section .faq-answer.show {
+  display: block;
+}
+
+.faq-section .faq-icon {
+  transition: transform 0.3s;
+}
+
+.faq-section .faq-icon.open {
+  transform: rotate(45deg);
 }
