@@ -414,3 +414,22 @@ span.text {
 .faq-section .faq-icon.open {
   transform: rotate(45deg);
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .faq-section .container {
+    padding: 0 1rem; /* Add padding to the container */
+  }
+
+  .faq-section .faq-item {
+    margin-bottom: 1rem; /* Add margin between FAQ items */
+  }
+
+  .faq-section .faq-question {
+    padding: 1rem; /* Adjust padding for questions */
+  }
+
+  .faq-section .faq-answer {
+    padding: 1rem; /* Adjust padding for answers */
+  }
+}
