@@ -170,6 +170,13 @@ span.text {
   }
 }
 
+@media (max-width: 768px) {
+  .about-img {
+   height: 300px;
+   width: 300px; /* Stop rotation animation */
+  }
+}
+
 /* BREAKPOINTS */
 @media (max-width: 992px) {
   .header {
