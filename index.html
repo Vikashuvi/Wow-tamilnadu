@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glassmorphic Nav Bar with Grid Background</title>
+  <title>GDSC WOW</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Optional: You can also provide a PNG version of your favicon for better compatibility -->
+  <link rel="shortcut icon" href="./assests/wow logo.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="style.css">
@@ -17,7 +20,7 @@
     <nav class="navbar hidden md:flex space-x-4">
       <!-- Add your nav links here -->
     </nav>
-    <button class="bg-black text-white py-1.5 px-3 text-sm rounded hover:bg-gray-400">Register</button>
+    <button class="btn bg-black text-white py-1.5 px-3 text-sm rounded">Register</button>
   </header>
   <div class="nav-bg"></div>
 
@@ -26,7 +29,7 @@
     <div class="w-full md:w-1/2 text-center md:text-left">
       <h1 class="text-4xl md:text-6xl mb-4">GDSC WOW</h1>
       <p class="text-lg mb-6">This is a sample website with a glassmorphic navigation bar and a grid background.</p>
-      <button class="bg-black text-white py-1 px-3 text-sm rounded hover:bg-gray-400">Register</button>
+      <button class="btn bg-black text-white py-2 px-4 text-sm rounded">Register</button>
     </div>
     <div class="w-full md:w-1/2 flex justify-center md:justify-start">
       <img src="./assests/wow logo (1).png" alt="Event Image" class="h-120 w-120 md:h-150 md:w-150 mb-4 md:mb-0">
@@ -48,7 +51,7 @@
         </div>
         <div class="box">
           <span class="num" id="min-box">00</span>
-          <span class="text">Minutes</span>
+          <span class="text mx-4">Minutes</span>
         </div>
         <div class="box">
           <span class="num" id="sec-box">00</span>
@@ -81,28 +84,48 @@
         <ul class="image-list flex overflow-x-auto">
           <!-- Add your agenda items here -->
           <li class="image-item bg-red-400 p-6 flex-none">
-            <p class="text-2xl font-bold">8:30am</p>
-            <p class="mt-2">Registration</p>
+            <p class="text-2xl font-bold">8:30 - 9:30 AM</p>
+            <h3 class="mt-2">Registration</h3>
           </li>
           <li class="image-item bg-green-400 p-6 flex-none">
-            <p class="text-2xl font-bold">9:30am</p>
-            <p class="mt-2">Opening Keynote</p>
+            <p class="text-2xl font-bold">9:30 – 10:00 AM</p>
+            <h3 class="mt-2">Opening Keynote</h3>
           </li>
           <li class="image-item bg-blue-400 p-6 flex-none">
-            <p class="text-2xl font-bold">10:30am</p>
-            <p class="mt-2">AI Impacts on Technical Careers</p>
+            <p class="text-2xl font-bold">10:00 - 10:45 AM</p>
+            <p class="mt-2">What Is Other Than AI: The Future of Technical Careers</p>
           </li>
           <li class="image-item bg-yellow-400 p-6 flex-none">
-            <p class="text-2xl font-bold">10:45am</p>
+            <p class="text-2xl font-bold">10:45 - 11:45 AM</p>
             <p class="mt-2">Panel Discussion</p>
           </li>
           <li class="image-item bg-red-400 p-6 flex-none">
-            <p class="text-2xl font-bold">11:15am</p>
+            <p class="text-2xl font-bold">11:15 – 11:30 AM</p>
             <p class="mt-2">Refreshments Break</p>
           </li>
           <li class="image-item bg-green-400 p-6 flex-none">
-            <p class="text-2xl font-bold">11:30am</p>
-            <p class="mt-2">AI Impacts Non-Technical Careers</p>
+            <p class="text-2xl font-bold">11:30 – 12:00 PM</p>
+            <p class="mt-2">What Is Other Than Technical: Diverse Roles in the Tech Industry</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">12:00 – 12:30 PM</p>
+            <p class="mt-2"> Panel Discussion</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">12:30 – 1:30 PM</p>
+            <p class="mt-2">Networking Lunch</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">1:30 – 2:30 PM</p>
+            <p class="mt-2">Talk on Higher Education & Internships</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">2:30 – 3:00 PM</p>
+            <p class="mt-2">Panel Discussion</p>
+          </li>
+          <li class="image-item bg-green-400 p-6 flex-none">
+            <p class="text-2xl font-bold">3:00 – 4:00 PM</p>
+            <p class="mt-2">Resume Building Session</p>
           </li>
         </ul>
         <button id="next-slide" class="slide-button material-symbols-rounded">
@@ -118,7 +141,7 @@
   </section>
 
 
-  <section class="faq-section">
+  <section class="faq-section my-10">
     <div class="container mx-auto ">
       <h2 class="text-4xl md:text-6xl mb-8 text-center text-white">Frequently Asked Questions</h2>
       <div class="faq-item">
@@ -139,7 +162,7 @@
           <p>You can register for the event by clicking on the 'Register' button on the top of the page and filling out the registration form.</p>
         </div>
       </div>
-      <div class="faq-item mt-4">
+      <div class="faq-item mt-4 ">
         <button class="faq-question flex justify-between items-center p-4 w-full text-left text-white rounded">
           <span>Who can attend the event?</span>
           <span class="faq-icon">+</span>
@@ -155,7 +178,7 @@
 
   <!--sponsor section -->
 
-  <section class="sponsor-section mt-6">
+  <section class="sponsor-section mt-6 mb-8">
     <div class="container mx-auto">
       <h2 class="text-4xl md:text-6xl mb-8 text-center text-white">Sponsor</h2>
       <div class="slide-wrapper relative">
@@ -194,6 +217,25 @@
       </div>
     </div>
   </section>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="map-section">
+        <!-- Embed your map here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15646.695001037373!2d77.8317135!3d11.3585233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba964017038dfe3%3A0xd5a68d71e9c1aec7!2sK%20S%20R%20Institute%20For%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1717824870601!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div class="details-section">
+        <h1>Google Developer Student Clubs</h1>
+        <p>Email: info@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <div class="footer-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
   
   
 

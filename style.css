@@ -14,6 +14,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.btn:hover {
+  background-color: #f9ab00;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -106,7 +110,7 @@
 .countdown .box .text {
   font-size: 1em;
   background-color: var(--color-white);
-  padding: 0.7em;
+  padding: 1em;
   font-weight: 600;
   border-radius: 0.3em;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
@@ -584,4 +588,129 @@ span.text {
   .slide-scrollbar .scrollbar-thumb {
     width: 40%;
   }
+}
+
+footer {
+  /* Dark background color */
+ color: #ffffff; /* White text color */
+ padding: 40px 0; /* Increased padding for more space */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.footer-container {
+ display: flex;
+ width: 90%;
+ max-width: 1200px;
+ flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+}
+
+.map-section {
+ flex: 1;
+ height: 300px; /* Adjusted height */
+ margin-right: 20px; /* Space between map and details */
+ background-color: #1e1e1e; /* Darker background for map section */
+ border-radius: 10px; /* Rounded corners */
+ overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.details-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e; /* Darker background for details section */
+  border-radius: 10px; /* Rounded corners */
+  padding-left: 20px; /* Adjusted padding for better spacing */
+}
+
+
+.details-section h1 {
+ font-size: 1.5rem; /* Adjusted font size */
+ margin-top: 15px;
+}
+
+.details-section p {
+ /* Adjusted font size */
+  margin-top: 15px;
+ }
+
+.footer-links {
+ display: flex;
+ gap: 15px;
+ margin-top: 140px; /* Increased margin for better spacing */
+}
+
+.footer-links a {
+ color: #fff;
+ text-decoration: none;
+ font-size: 0.5rem; /* Increased font size */
+ transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer-links a:hover {
+ text-decoration: underline;
+ color: #f9ab00; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+ footer {
+   display: flex;
+   flex-direction: column; /* Arrange items vertically */
+   align-items: center; /* Center all items horizontally */
+ }
+
+ .footer-container {
+   display: flex;
+   flex-direction: column; /* Arrange items vertically inside the container */
+   align-items: center; /* Center all items horizontally */
+ }
+
+ .map-section {
+   order: 1; /* Display the map section first */
+   width: 100%; /* Ensure the map section takes full width */
+   height: 200px; /* Adjust height for mobile view */
+   display: flex;
+   justify-content: center; /* Center the map horizontally */
+   margin-bottom: 20px; /* Add bottom margin for spacing */
+ }
+
+ .map {
+   width: 100%; /* Ensure the map takes full width of its container */
+   max-width: 300px; /* Optional: Limit the max width */
+ }
+
+ .details-section {
+   order: 2; /* Display the details section second */
+   width: 100%; /* Ensure the details section takes full width */
+   text-align: left; /* Center align the text for better appearance */
+   margin-left: -20px;
+ }
+ .footer-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Increased margin for better spacing */
+ }
+ 
+}
+
+
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Style your custom scrollbar */
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); 
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ea4335; 
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
