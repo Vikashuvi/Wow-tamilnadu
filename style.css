@@ -439,7 +439,7 @@ span.text {
 }
 
 
-/* Sponsor section */
+/* Speaker section */
 
 .sponsor-section {
   padding: 2rem 0;
@@ -713,4 +713,10 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: #555; 
+}
+
+
+.spk {
+  height: 145px;
+  width: 145px;
 }
