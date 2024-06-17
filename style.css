@@ -627,7 +627,7 @@ footer {
 
 .details-section h1 {
  font-size: 1.5rem; /* Adjusted font size */
- margin-top: 15px;
+ margin-top: 14px;
 }
 
 .details-section p {
@@ -638,15 +638,15 @@ footer {
 .footer-links {
  display: flex;
  gap: 15px;
- margin-top: 140px; /* Increased margin for better spacing */
+ margin-top: 130px; /* Increased margin for better spacing */
 }
 
 .footer-links a {
  color: #fff;
  text-decoration: none;
- font-size: 0.5rem; /* Increased font size */
+ font-size: 24px; /* Increased font size */
  transition: color 0.3s; /* Smooth color transition */
-}
+ }
 
 .footer-links a:hover {
  text-decoration: underline;
@@ -720,3 +720,5 @@ body::-webkit-scrollbar-thumb:hover {
   height: 145px;
   width: 145px;
 }
+
+
