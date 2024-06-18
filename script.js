@@ -2,7 +2,7 @@
   let hrBox = document.getElementById("hr-box");
   let minBox = document.getElementById("min-box");
   let secBox = document.getElementById("sec-box");
-  let endDate = new Date(2024, 6, 6, 00, 00);
+  let endDate = new Date(2024, 6, 6);
   let endTime = endDate.getTime();
   
   function countdown() {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// sponsor section
+// speaker section
 
 const initSlide = () => {
   const imageList = document.querySelector(".slide-wrapper .image-list");
@@ -206,3 +206,68 @@ window.addEventListener("resize", initSlide);
 window.addEventListener("load", initSlide);
 
 // slider end
+
+
+const initDuplicatedSlide = () => {
+  const imageList = document.querySelector(".duplicated-sponsor-section .duplicated-image-list");
+  const slideButtons = document.querySelectorAll(".duplicated-sponsor-section .duplicated-slid-button");
+  const sliderScrollbar = document.querySelector(".duplicated-sponsor-section .duplicated-slide-scrollbar");
+  const scrollbarThumb = sliderScrollbar.querySelector(".duplicated-scrollbar-thumb");
+  const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+  // Handle scrollbar thumb drag
+  scrollbarThumb.addEventListener("mousedown", (e) => {
+    const startX = e.clientX;
+    const thumbPosition = scrollbarThumb.offsetLeft;
+    const maxThumbPosition = sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth;
+
+    const handleMouseMove = (e) => {
+      const deltaX = e.clientX - startX;
+      const newThumbPosition = thumbPosition + deltaX;
+      const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+      const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+      scrollbarThumb.style.left = `${boundedPosition}px`;
+      imageList.scrollLeft = scrollPosition;
+    };
+
+    const handleMouseUp = () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  });
+
+  // Slide images according to the slide button clicks
+  slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const direction = button.id === "prev-duplicated-slid" ? -1 : 1;
+      const scrollAmount = imageList.clientWidth * direction;
+      imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+  });
+
+  // Update scrollbar thumb position based on image scroll
+  const updateDuplicatedScrollThumbPosition = () => {
+    const scrollPosition = imageList.scrollLeft;
+    const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+    scrollbarThumb.style.left = `${thumbPosition}px`;
+  };
+
+  // Call these functions when image list scrolls
+  imageList.addEventListener("scroll", updateDuplicatedScrollThumbPosition);
+
+  // Initial function call to set initial scrollbar position
+  updateDuplicatedScrollThumbPosition();
+};
+
+// Event listener for window resize to reinitialize scrollbar
+window.addEventListener("resize", initDuplicatedSlide);
+
+// Event listener for initial load to initialize scrollbar
+window.addEventListener("load", initDuplicatedSlide);
+
+// Initialize duplicated slide on page load
+initDuplicatedSlide();
