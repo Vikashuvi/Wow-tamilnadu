@@ -18,6 +18,52 @@
   background-color: #f9ab00;
 }
 
+.btn-register {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f9ab00, #ff7f00);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn-register:hover {
+  color: var(--color-white);
+  background: linear-gradient(145deg, #ff7f00, #f9ab00);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.btn-register::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  background-color: transparent;
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  z-index: -1;
+}
+
+.btn-register:hover::before {
+  width: 120%;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+
+
 .header {
   position: fixed;
   top: 0;
